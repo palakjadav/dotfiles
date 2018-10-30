@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# git-friendly: pull after branch change
+#
+# Usage: ../docs/br.md
+#
+# See more:
+# https://github.com/jamiew/git-friendly
+#
+# Author: Artem Sapegin, sapegin.me
+# License: MIT
+# https://github.com/sapegin/dotfiles
+
+if [ "$1" != "-d" ] && [ "$1" != "-D" ] && [ "$1" != "" ]; then
+	# Switch to a branch
+	branch "$1"
+
+	# Pull data if the remote branch exists
+	branch_name=$(git rev-parse --abbrev-ref HEAD)
+	remote_branch_exists=$(git branch -r --no-color | egrep " origin/$branch_name\$")
+	if [ -n "$remote_branch_exists" ]; then
+		echo
+		pull
+	fi
+else
+	# Pass all the arguments to branch
+	branch $@
+fi
