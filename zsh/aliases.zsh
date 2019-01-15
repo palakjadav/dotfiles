@@ -24,7 +24,7 @@ if command -v hub &>/dev/null; then
   eval "$(hub alias -s)"      # Use hub as a git wrapper
 fi
 alias g='git'
-alias gl='git log'
+alias gl='git log --oneline --decorate --graph'
 alias gll='git loglines'
 alias gwc='git whatchanged'
 alias gwh='git where'

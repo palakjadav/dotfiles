@@ -27,7 +27,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Menu bar: hide remaining battery time (on pre-10.8); hide percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # Menu bar: hide the useless Time Machine and Volume icons
@@ -369,7 +369,7 @@ find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 # Check spelling as you type 
 defaults write -g CheckSpellingWhileTyping -boolean true
 
-# Enable continuous spell checking everywhere (don't know what it means)
+# Enable continuous spell checking everywhere 
 defaults write -g WebContinuousSpellCheckingEnabled -boolean true
 
 # Spotlight menu keyboard shortcut: none
@@ -539,7 +539,7 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 # Battery
 
 # # Computer sleep: 10 min
-# sudo pmset -b sleep 10
+sudo pmset -b sleep 10
 
 # # Display sleep: 5 min
 # sudo pmset -b displaysleep 5

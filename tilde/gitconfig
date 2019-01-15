@@ -8,7 +8,7 @@
 	new = green bold
 
 [core]
-	editor = code --wait
+	editor = atom --wait
 	pager = git-pager
 	autocrlf = false
 	safecrlf = false
@@ -115,3 +115,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[user]
+	name = Palak Jadav
+	email = palaknjadav@gmail.com

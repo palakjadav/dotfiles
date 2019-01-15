@@ -50,33 +50,31 @@ brew install node
 brew install nvm
 brew install dockutil
 
-# Npm
 npm i -g npm-upgrade
 npm i -g tldr
 
-brew tap caskroom/cask            # Tap the Caskroom/Cask repository from Github using HTTPS.
+brew tap caskroom/cask                # Tap the Caskroom/Cask repository from Github using HTTPS.
 brew cask install firefox
 brew cask install google-chrome
 
-# IDEs and development toolings
-brew cask install sublime-text
+brew cask install sublime-text        # IDEs and development toolings
 
+brew search atom                      # Searches all known Casks for a partial or exact match.
+brew cask info atom                   # Displays information about the given Cask
+brew cask install atom                # Install the given cask.
 
-brew search iterm2                # Searches all known Casks for a partial or exact match.
-brew cask info iterm2             # Displays information about the given Cask
+brew search visual-studio-code        # Searches all known Casks for a partial or exact match.
+brew cask info visual-studio-code     # Displays information about the given Cask
+brew cask install visual-studio-code  # Install the given cask.
 
-brew cask install iterm2          # Install the given cask.
+brew search iterm2                    # Searches all known Casks for a partial or exact match.
+brew cask info iterm2                 # Displays information about the given Cask
+brew cask install iterm2              # Install the given cask.
 
+brew cask install 1password           # security and privacy
 
-# security and privacy
-brew cask install 1password
-
-# communication
-brew cask install slack
+brew cask install slack               # communication
 
 brew cask install docker
 
-# Remove outdated versions from the cellar.
-brew cleanup
-
-
+brew cleanup                          # Remove outdated versions from the cellar.
