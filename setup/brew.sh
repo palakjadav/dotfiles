@@ -71,6 +71,10 @@ brew search iterm2                    # Searches all known Casks for a partial o
 brew cask info iterm2                 # Displays information about the given Cask
 brew cask install iterm2              # Install the given cask.
 
+brew search mysqlworkbench            # Searches all known Casks for a partial or exact match.
+brew cask info mysqlworkbench         # Displays information about the given Cask
+brew cask install mysqlworkbench      # Install the given cask.
+
 brew cask install 1password           # security and privacy
 
 brew cask install slack               # communication
